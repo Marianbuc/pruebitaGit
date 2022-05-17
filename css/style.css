@@ -1,0 +1,350 @@
+/*reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.estilosBody{
+    background-color: antiquewhite;
+}
+
+
+
+/*estilos de header*/
+ .tituloHome{
+     color: rgb(72, 14, 126);
+     text-align: center;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    ;
+     font-size: 3rem;
+     margin-bottom: 1rem;
+     margin-top: 1rem;
+    
+ }
+
+ /*estilos del menu*/
+  nav ul{
+      display: flex;
+      list-style-type: none;
+      justify-content:space-evenly;
+     
+  }
+
+  nav ul li{
+      font-size: 1rem;
+      font-weight: bolder;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      padding: 1rem;
+  }
+
+  nav ul ul{
+      display: none;
+      position: absolute;
+      background-color: rgb(238, 208, 170);
+      padding: 5px;
+      color: rgb(27, 11, 42)
+  }
+
+  nav ul li:hover> ul{
+    display:block;
+    color: rgb(27, 11, 42);
+  }
+
+
+
+  .headerPages{
+    margin: 3%; 
+    text-align: left;
+    text-decoration: underline;
+    color: rgb(27, 11, 42) ;
+}
+
+.estilosHdos{
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 1%;
+}
+
+.estilosParrafos{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: medium;
+    margin-bottom: 2%;
+    color:rgb(69, 4, 17);
+}
+
+.estilosFormularios{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+
+  /*estilos de main*/
+
+  .imagenPrincipal{
+      width: 100%;
+      height: 700%;
+  }
+
+  .imagenSeguir{
+      width: 40%;
+      height: 40%;
+  }
+
+  .imagenFacebook{
+    width: 40%;
+    height: 40%;
+  }
+
+  .imagenInstagram{
+    width: 20%;
+    height:20%;
+  }
+
+  .imagenWhatsapp{
+    width: 20%;
+    height: 20%;
+
+  }
+  .estilosSection{
+      margin: 1rem;
+      padding: 0.5rem;
+  }
+
+  /*estilos section 2*/
+  
+  .tituloSection{
+      text-align:left;
+      color: rgb(18, 5, 30);
+      margin-bottom: 0.5rem;
+      margin-left: 5rem;
+  }
+
+  .local11{
+      width: 23%;
+      height: 20%;
+    
+    }
+
+
+    .local2{
+    width: 10%;
+    height: 10%;
+    }
+    
+   .local3{
+    width: 23%;
+    height: 20%;
+   } 
+    .local11{
+        animation-name: trasladar;
+       animation-duration: 8s;
+       animation-timing-function: linear;
+       animation-iteration-count: infinite;
+   }
+
+   @keyframes trasladar{
+       from{
+           transform: translate(2000px);
+       }
+    
+    }
+
+    .local2{
+        animation-name: trasladar2;
+        animation-duration: 8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+ 
+    @keyframes trasladar2{
+        from{
+            transform: translate(2000px);
+        }
+     
+    }
+    .local3{
+        animation-name: trasladar2;
+        animation-duration: 8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+ 
+    @keyframes trasladar2{
+        from{
+            transform: translate(2000px);
+        }
+        
+    }
+    .tituloSection{
+        animation-name: trasladar2;
+        animation-duration: 8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+ 
+    @keyframes trasladar2{
+        from{
+            transform: translate(2000px);
+        }
+        
+
+    }
+
+   
+   
+
+   /*estructurando el body con grid*/ 
+   .caja-1{
+       display: grid;
+       height: 100vh;
+       grid-template-rows: 1fr 5fr 5fr 0.5fr;
+       grid-template-areas: "header"
+                            "menu-1"
+                            "main"
+                            "section"
+                            "footer";
+
+   }
+.menu-1{
+    grid-area: menu-1;
+}   
+.header{
+    grid-area: header;
+}
+
+.main{
+    grid-area: main;
+}
+.section{
+    grid-area: section;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.estilosSection{
+    height: 100vh;
+    grid-template-rows: 0.3fr;
+    display: grid;
+    grid-template-areas: "imagenSeguir"
+                         "imagenFacebook"
+                        "imagenInstagram"
+                        "imagenWhatsapp";  
+ 
+}
+
+.imagenSeguir{
+    grid-area: imagenSeguir;
+}
+.imagenFacebook{
+    grid-area: imagenFacebook;
+}
+.imagenInstagram{
+    grid-area: imagenInstagram;
+}
+.imagenWhatsapp{
+    grid-area: imagenWhatsapp;
+  
+}
+
+
+/*pages collection con grid*/
+
+.mainCollection{
+    height: 100vh;
+    display: grid;
+     grid-template-areas: "galeriaUno galeriaDos"
+                          "galeriaTres galeriaCuatro"
+                          "galeriaCinco galeriaSeis";
+}
+
+.galeriaUno{
+    grid-area:galeriaUno;
+}
+.galeriaDos{
+    grid-area: galeriaDos;
+}
+.galeriaTres{
+    grid-area: galeriaTres;
+}
+.galeriaCuatro{
+    grid-area: galeriaCuatro;
+}
+.galeriaCinco{
+    grid-area: galeriaCinco;
+}
+.galeriaSeis{
+    grid-area: galeriaSeis;
+}
+
+
+ 
+
+/*estilos de footer*/
+.derechosReservados{
+    color: rgb(107, 15, 15);
+    font-family: 'Roboto', sans-serif;
+    text-align: end;
+    font-size: xx-small;}
+   
+
+/*media queries*/  
+
+@media screen and (min-width:600px) {
+ 
+
+        .estilosSection{
+            height: 100vh;
+            grid-template-rows: 0.3fr;
+            display: grid;
+            grid-template-areas: "imagenSeguir imagenFacebook"
+                                 "imagenInstagram imagenInstagram"
+                                 "imagenWhatsapp imagenWhatsapp";   }
+        
+        .mainCollection{
+                        height: 100vh;
+                        grid-template-rows: 0.3fr;
+                        display: grid;
+                        grid-template-areas: "galeriaUno galeriaDos galeriaTres" 
+                                             " galeriaCuatro galeriaCinco galeriaSeis";
+                                       }                     
+                        }
+ @media screen and (min-width:1024px) { 
+     
+         .estilosSection{
+              height: 100vh;
+              grid-template-rows: 0.3fr;
+              display: grid;
+              grid-template-areas: "imagenSeguir imagenFacebook imagenInstagram"
+                                   "imagenWhatsapp imagenWhatsapp imagenWhatsapp";   }
+                        
+
+     
+    
+                               
+     
+ }    
+
+
+
+
+     
+
+ 
+
+   
+    
+
+
+
+    
+                           
+  
+
+
